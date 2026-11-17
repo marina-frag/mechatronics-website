@@ -33,6 +33,11 @@ npm run glb
 | Ονόματα και περιγραφές εξαρτημάτων | `src/content/spot/parts.ts` |
 | Κείμενα σελίδας Spot, βήματα συναρμολόγησης, ηλεκτρονικά, ομάδα | `src/content/spot/story.ts` |
 
+## Νέα ομάδα
+
+Τι στέλνει μια ομάδα για να μπει το project της: [docs/new-project-guide.md](docs/new-project-guide.md).
+Σχέδιο για το γενικό πρότυπο σελίδας: [docs/project-template-plan.md](docs/project-template-plan.md).
+
 ## Δημοσίευση
 
 ```bash
