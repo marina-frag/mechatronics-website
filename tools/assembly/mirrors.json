@@ -1,0 +1,26 @@
+{
+ "arm_joint_for_shoulder_reinforcement_st_LegFR": {
+  "point": [
+   0,
+   0,
+   28.05
+  ],
+  "normal": [
+   0,
+   0,
+   1
+  ]
+ },
+ "arm_joint_for_shoulder_reinforcement_st_LegBL": {
+  "point": [
+   0,
+   0,
+   28.05
+  ],
+  "normal": [
+   0,
+   0,
+   1
+  ]
+ }
+}

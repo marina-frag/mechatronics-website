@@ -20,6 +20,8 @@ type Props = {
   view?: [number, number, number];
   /** Απόσταση κάμερας ως πολλαπλάσιο του «ίσα-ίσα χωράει». */
   distance?: number;
+  /** Μετακίνηση του μοντέλου στην οθόνη (κλάσμα πλάτους/ύψους), μόνο σε φαρδιές οθόνες. */
+  shift?: [number, number];
   onReady?: (model: SpotModelData) => void;
   children: (model: SpotModelData) => ReactNode;
   overlay?: ReactNode;
@@ -55,8 +57,9 @@ function Scene({
   children,
   focus,
   fitKey,
-  view = [1, 0.75, 1.2],
+  view = [-1, 0.75, 1.2],
   distance = 1.15,
+  shift,
   onReady,
 }: Omit<Props, 'label' | 'className' | 'controls' | 'overlay'>) {
   const model = useSpotModel();
@@ -66,6 +69,7 @@ function Scene({
 
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   const width = useThree((s) => s.size.width);
+  const height = useThree((s) => s.size.height);
   const orbit = useThree((s) => s.controls) as unknown as OrbitControlsImpl | null;
   const focusRef = useRef(focus);
   focusRef.current = focus;
@@ -82,6 +86,8 @@ function Scene({
     camera.position.copy(center).addScaledVector(new Vector3(vx, vy, vz).normalize(), dist);
     camera.near = dist / 100;
     camera.far = dist * 10;
+    if (shift && width >= 900) camera.setViewOffset(width, height, -shift[0] * width, -shift[1] * height, width, height);
+    else camera.clearViewOffset();
     camera.updateProjectionMatrix();
     camera.lookAt(center);
     if (orbit) {
@@ -90,7 +96,7 @@ function Scene({
       orbit.maxDistance = dist * 3;
       orbit.update();
     }
-  }, [model, fitKey, orbit, camera, width, distance, vx, vy, vz]);
+  }, [model, fitKey, orbit, camera, width, height, distance, vx, vy, vz, shift?.[0], shift?.[1]]);
 
   return <>{children(model)}</>;
 }

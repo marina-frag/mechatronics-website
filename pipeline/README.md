@@ -21,7 +21,7 @@ cd ~/mechatronics_web/pipeline
 
 ## Πώς δουλεύει
 
-1. **`freecad_export.py`** (με `freecad.cmd`): ανοίγει το `SPOT_assembly.FCStd` και παίρνει
+1. **`freecad_export.py`** (με `freecad.cmd`): ανοίγει το `SPOT_assembly_auto.FCStd` (την αυτόματη συναρμολόγηση, βλ. `tools/assembly/`) και παίρνει
    κάθε άμεσο παιδί του Assembly ως ένα εξάρτημα, μαζί με τη θέση του στη συναρμολόγηση.
    Διαβάζει STL (Mesh), STEP/Part, Body, App::Part και App::Link. Τα ίδια κομμάτια
    γράφονται μία φορά. Γράφει `build/manifest.json` και `build/geometry.bin`.

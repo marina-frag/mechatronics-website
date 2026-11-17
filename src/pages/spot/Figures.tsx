@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { Vector3 } from 'three';
 import { RangeSlider } from '../../components/Controls';
 import { assemblySteps } from '../../content/spot/story';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
+import { CalloutLegend, CalloutOverlay, CalloutTracker, type Callout } from '../../three/Callouts';
 import { ModelStage } from '../../three/ModelStage';
 import { SpotModel, type Visibility } from '../../three/SpotModel';
-import type { Part } from '../../three/spotModel';
+import { groupOffsets, type Part, type SpotModelData } from '../../three/spotModel';
 
 function Figure({ children, caption }: { children: ReactNode; caption: ReactNode }) {
   return (
@@ -17,24 +19,72 @@ function Figure({ children, caption }: { children: ReactNode; caption: ReactNode
 
 const explodeLabel = (v: number) => `${Math.round(v * 100)}% ανάλυση`;
 
-/** Ένα πόδι (μπροστά αριστερά) μαζί με τον ώμο του, με slider ανάλυσης. */
-export function LegFigure() {
-  const [explode, setExplode] = useState(0.35);
-  const inLeg = useCallback((p: Part) => p.leg === 'FL' || p.leg === 'F', []);
+/** Το μπροστινό αριστερό πόδι, από το arm_joint ως το πέλμα (χωρίς τους ώμους του σώματος). */
+const inLeg = (p: Part) => p.leg === 'FL';
+const legVisibility = (p: Part): Visibility => (inLeg(p) ? 'show' : 'hide');
+/** Κατά το πλάτος (άξονας z του κόσμου) τα κομμάτια είναι στοιβαγμένα, οπότε απομακρύνονται περισσότερο. */
+const LEG_SPREAD = new Vector3(0.7, 0.5, 2.4);
+
+const LEG_CALLOUTS: Callout[] = [
+  { match: /arm_joint/i, title: 'Σύνδεσμος μηρού', text: 'Κρατά τον servo του ώμου' },
+  { match: /^[LR]_shoulder_reinforcement/i, title: 'Ενίσχυση ώμου', text: 'Κρατά το ρουλεμάν του ισχίου' },
+  { match: /motor_.*_top$/i, title: 'Servo ώμου', text: 'Γέρνει όλο το πόδι στο πλάι' },
+  { match: /motor_.*_middle$/i, title: 'Servo ισχίου', text: 'Γυρίζει τον μηρό μπρος-πίσω' },
+  { match: /arm_cover/i, title: 'Κάλυμμα μηρού', text: 'Μέσα του κάθεται ο servo του ισχίου' },
+  { match: /^[LR]_arm_st/i, title: 'Μηρός', text: 'Από το ισχίο ως το γόνατο' },
+  { match: /^Bearing/i, title: 'Ρουλεμάν', text: 'Ένα σε κάθε άρθρωση' },
+  { match: /motor_.*_bottom$/i, title: 'Servo γονάτου', text: 'Μέσα στην κνήμη· λυγίζει το γόνατο' },
+  { match: /wrist/i, title: 'Κνήμη', text: 'Από το γόνατο ως το πέλμα' },
+  { match: /^foot/i, title: 'Πέλμα', text: 'Πατά στο έδαφος' },
+];
+
+function LegModel({
+  model,
+  explode,
+  overlay,
+}: {
+  model: SpotModelData;
+  explode: number;
+  overlay: RefObject<HTMLDivElement | null>;
+}) {
+  const parts = useMemo(() => model.parts.filter(inLeg), [model]);
+  const offsets = useMemo(
+    () => groupOffsets(parts, (p, c) => p.box.getCenter(new Vector3()).sub(c).multiply(LEG_SPREAD)),
+    [parts],
+  );
   const explodeFn = useCallback(() => explode, [explode]);
-  const visibility = useCallback((p: Part): Visibility => (inLeg(p) ? 'show' : 'hide'), [inLeg]);
+  return (
+    <>
+      <SpotModel model={model} explode={explodeFn} visibility={legVisibility} offsets={offsets} />
+      <CalloutTracker callouts={LEG_CALLOUTS} parts={parts} offsets={offsets} overlay={overlay} />
+    </>
+  );
+}
+
+/** Ένα πόδι με ετικέτες και slider ανάλυσης. */
+export function LegFigure() {
+  const [explode, setExplode] = useState(0.6);
+  const overlay = useRef<HTMLDivElement>(null);
 
   return (
-    <Figure caption="Σύρε για να χωρίσεις το μπροστινό αριστερό πόδι στα κομμάτια του. Σύρε πάνω στο σχήμα για να το περιστρέψεις.">
+    <Figure
+      caption={
+        <>
+          Σύρε για να χωρίσεις το μπροστινό αριστερό πόδι στα κομμάτια του. Σύρε πάνω στο σχήμα για να το περιστρέψεις.
+          <CalloutLegend callouts={LEG_CALLOUTS} />
+        </>
+      }
+    >
       <ModelStage
-        label="Το μπροστινό αριστερό πόδι του Spot"
-        className="figure__stage"
+        label="Το μπροστινό αριστερό πόδι του Spot, με ετικέτες"
+        className="figure__stage figure__stage--tall"
         controls={{ zoom: false }}
         focus={inLeg}
-        distance={1.2}
-        view={[1.2, 0.5, 1]}
+        distance={1.5}
+        view={[-1, 0.35, -0.8]}
+        overlay={<CalloutOverlay ref={overlay} callouts={LEG_CALLOUTS} />}
       >
-        {(model) => <SpotModel model={model} explode={explodeFn} visibility={visibility} />}
+        {(model) => <LegModel model={model} explode={explode} overlay={overlay} />}
       </ModelStage>
       <RangeSlider
         label="Ανάλυση του ποδιού σε μέρη"
@@ -129,44 +179,6 @@ export function AssemblyFigure() {
           ))}
         </ol>
       </div>
-    </Figure>
-  );
-}
-
-/** Οι κινητήρες τονισμένοι, ο υπόλοιπος σκελετός διάφανος. */
-export function MotorsFigure() {
-  const [explode, setExplode] = useState(0);
-  const [motors, setMotors] = useState<number | null>(null);
-  const explodeFn = useCallback(() => explode, [explode]);
-  const visibility = useCallback(
-    (p: Part): Visibility => (p.subsystem === 'motors' || p.typeKey === 'bearing' ? 'show' : 'ghost'),
-    [],
-  );
-
-  return (
-    <Figure caption="Οι σερβοκινητήρες και τα ρουλεμάν των αρθρώσεων· ο σκελετός φαίνεται διάφανος.">
-      <ModelStage
-        label="Οι σερβοκινητήρες του Spot μέσα στον σκελετό"
-        className="figure__stage"
-        controls={{ zoom: false }}
-        distance={1.25}
-        onReady={(m) => setMotors(m.parts.filter((p) => p.subsystem === 'motors').length)}
-        overlay={
-          motors === 0 ? (
-            <div className="stage__status">Οι σερβοκινητήρες δεν έχουν μπει ακόμα στη συναρμολόγηση του CAD.</div>
-          ) : null
-        }
-      >
-        {(model) => <SpotModel model={model} explode={explodeFn} visibility={visibility} />}
-      </ModelStage>
-      <RangeSlider
-        label="Ανάλυση σε μέρη"
-        value={explode}
-        onChange={setExplode}
-        startLabel="Συναρμολογημένο"
-        endLabel="Σε μέρη"
-        valueText={explodeLabel(explode)}
-      />
     </Figure>
   );
 }

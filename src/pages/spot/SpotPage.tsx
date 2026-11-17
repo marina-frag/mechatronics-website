@@ -2,7 +2,8 @@ import { site } from '../../content/site';
 import { electronics, spotGoals, spotIntro, spotTeam } from '../../content/spot/story';
 import { ElectronicsDiagram } from './ElectronicsDiagram';
 import { Explorer } from './Explorer';
-import { AssemblyFigure, LegFigure, MotorsFigure } from './Figures';
+import { BodyFigure } from './BodyFigure';
+import { AssemblyFigure, LegFigure } from './Figures';
 import { ScrollHero } from './ScrollHero';
 
 export default function SpotPage() {
@@ -47,6 +48,23 @@ export default function SpotPage() {
           <p className="eyebrow">Ελεύθερη εξερεύνηση</p>
           <h2>Εξερεύνησε το Spot</h2>
           <Explorer />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container container--wide">
+          <BodyFigure>
+            <p className="eyebrow">Ανατομία</p>
+            <h2>Το σώμα, ανοιχτό</h2>
+            <p>
+              Το σώμα είναι το κουτί που κρατά τα ηλεκτρονικά και ενώνει τα τέσσερα πόδια. Το κλείνουν δύο πλαϊνές
+              πλάκες, ένα πάνω και ένα κάτω κάλυμμα, και δύο καπάκια μπροστά και πίσω.
+            </p>
+            <p>
+              Στις δύο άκρες του κάθονται οι <strong>ώμοι</strong>: ένας για τα μπροστινά πόδια και ένας για τα πίσω.
+              Ο καθένας έχει ένα εξωτερικό και ένα εσωτερικό κομμάτι, ανάμεσα στα οποία γυρίζουν τα πόδια.
+            </p>
+          </BodyFigure>
         </div>
       </section>
 
@@ -101,9 +119,6 @@ export default function SpotPage() {
             Στις αρθρώσεις, ρουλεμάν παραλαμβάνουν τα φορτία του σώματος, ώστε να μην τα σηκώνει μόνος του ο άξονας κάθε
             κινητήρα.
           </p>
-        </div>
-        <div className="container">
-          <MotorsFigure />
         </div>
       </section>
 

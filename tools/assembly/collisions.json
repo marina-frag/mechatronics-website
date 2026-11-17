@@ -1,0 +1,2327 @@
+[
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "L_arm_st_LegBL",
+  "n": 158,
+  "bbox": [
+   [
+    131.78,
+    6.58,
+    -92.76
+   ],
+   [
+    202.18,
+    41.5,
+    19.82
+   ]
+  ],
+  "depth_max": 3.19,
+  "depth_p90": 1.58,
+  "n_inside": 31
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "L_wrist_st_LegBL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "Bearing_LegBL_bottom",
+  "n": 64,
+  "bbox": [
+   [
+    186.62,
+    41.5,
+    -101.17
+   ],
+   [
+    215.38,
+    49.19,
+    -73.01
+   ]
+  ],
+  "depth_max": 0.36,
+  "depth_p90": 0.31,
+  "n_inside": 180
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "Bearing_LegBL_middle",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "motor_LegBL_middle",
+  "n": 2541,
+  "bbox": [
+   [
+    133.86,
+    4.4,
+    -69.5
+   ],
+   [
+    202.18,
+    39.4,
+    15.83
+   ]
+  ],
+  "depth_max": 13.81,
+  "depth_p90": 0.14,
+  "n_inside": 1149
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegBL",
+  "b": "motor_LegBL_bottom",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "L_arm_st_LegFL",
+  "n": 158,
+  "bbox": [
+   [
+    -29.02,
+    6.58,
+    -92.76
+   ],
+   [
+    41.38,
+    41.5,
+    19.82
+   ]
+  ],
+  "depth_max": 3.19,
+  "depth_p90": 1.58,
+  "n_inside": 31
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "L_wrist_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "Bearing_LegFL_middle",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "Bearing_LegFL_bottom",
+  "n": 64,
+  "bbox": [
+   [
+    25.82,
+    41.5,
+    -101.17
+   ],
+   [
+    54.57,
+    49.19,
+    -73.01
+   ]
+  ],
+  "depth_max": 0.36,
+  "depth_p90": 0.31,
+  "n_inside": 179
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_bottom",
+  "n": 0
+ },
+ {
+  "a": "L_arm_cover_for_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_middle",
+  "n": 2541,
+  "bbox": [
+   [
+    -26.95,
+    4.4,
+    -69.5
+   ],
+   [
+    41.38,
+    39.4,
+    15.83
+   ]
+  ],
+  "depth_max": 13.41,
+  "depth_p90": 0.14,
+  "n_inside": 1144
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "B_cover_st",
+  "n": 0
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "non-mega_B_cover",
+  "n": 375,
+  "bbox": [
+   [
+    130.24,
+    -44.23,
+    -30.96
+   ],
+   [
+    154.24,
+    -9.73,
+    5.58
+   ]
+  ],
+  "depth_max": 5.27,
+  "depth_p90": 3.13,
+  "n_inside": 48
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "non-mega_T_cover",
+  "n": 216,
+  "bbox": [
+   [
+    131.16,
+    -44.23,
+    5.58
+   ],
+   [
+    154.24,
+    -15.54,
+    25.54
+   ]
+  ],
+  "depth_max": 4.76,
+  "depth_p90": 3.68,
+  "n_inside": 88
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "I_shoulder_st_F",
+  "n": 0
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "O_shoulder_st_B",
+  "n": 2407,
+  "bbox": [
+   [
+    169.03,
+    -47.09,
+    -25.96
+   ],
+   [
+    171.24,
+    -22.29,
+    22.62
+   ]
+  ],
+  "depth_max": 2.17,
+  "depth_p90": 0.33,
+  "n_inside": 1074
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "non-mega_L_side_plate",
+  "n": 330,
+  "bbox": [
+   [
+    130.24,
+    -25.23,
+    -21.1
+   ],
+   [
+    144.37,
+    -9.73,
+    6.07
+   ]
+  ],
+  "depth_max": 3.82,
+  "depth_p90": 3.62,
+  "n_inside": 175
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 174,
+  "bbox": [
+   [
+    132.74,
+    -25.23,
+    10.84
+   ],
+   [
+    135.74,
+    -19.73,
+    23.97
+   ]
+  ],
+  "depth_max": 0.01,
+  "depth_p90": 0.01,
+  "n_inside": 35
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "motor_LegBL_middle",
+  "n": 1654,
+  "bbox": [
+   [
+    140.24,
+    -9.73,
+    -12.96
+   ],
+   [
+    160.74,
+    -7.73,
+    7.54
+   ]
+  ],
+  "depth_max": 0.78,
+  "depth_p90": 0.04,
+  "n_inside": 486
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+  "b": "motor_LegBL_top",
+  "n": 196,
+  "bbox": [
+   [
+    130.24,
+    -25.23,
+    -22.96
+   ],
+   [
+    144.8,
+    -25.23,
+    17.54
+   ]
+  ],
+  "depth_max": 0.0,
+  "depth_p90": 0.0,
+  "n_inside": 6
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "R_arm_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "B_cover_st",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "non-mega_B_cover",
+  "n": 373,
+  "bbox": [
+   [
+    130.24,
+    -138.93,
+    -30.96
+   ],
+   [
+    154.24,
+    -104.43,
+    5.58
+   ]
+  ],
+  "depth_max": 5.27,
+  "depth_p90": 3.04,
+  "n_inside": 47
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "non-mega_T_cover",
+  "n": 215,
+  "bbox": [
+   [
+    131.16,
+    -133.13,
+    5.58
+   ],
+   [
+    154.24,
+    -104.43,
+    25.54
+   ]
+  ],
+  "depth_max": 4.76,
+  "depth_p90": 3.68,
+  "n_inside": 88
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "I_shoulder_st_F",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "O_shoulder_st_B",
+  "n": 2202,
+  "bbox": [
+   [
+    169.03,
+    -126.37,
+    -25.96
+   ],
+   [
+    171.24,
+    -101.58,
+    22.62
+   ]
+  ],
+  "depth_max": 2.17,
+  "depth_p90": 0.33,
+  "n_inside": 1114
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "non_mega_R_side_plate",
+  "n": 331,
+  "bbox": [
+   [
+    130.24,
+    -138.93,
+    -21.1
+   ],
+   [
+    144.37,
+    -123.43,
+    6.07
+   ]
+  ],
+  "depth_max": 3.92,
+  "depth_p90": 3.69,
+  "n_inside": 175
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 174,
+  "bbox": [
+   [
+    132.74,
+    -128.93,
+    10.84
+   ],
+   [
+    135.74,
+    -123.43,
+    23.97
+   ]
+  ],
+  "depth_max": 0.01,
+  "depth_p90": 0.01,
+  "n_inside": 35
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_middle",
+  "n": 1633,
+  "bbox": [
+   [
+    140.24,
+    -140.93,
+    -12.96
+   ],
+   [
+    160.74,
+    -138.93,
+    7.54
+   ]
+  ],
+  "depth_max": 1.97,
+  "depth_p90": 0.04,
+  "n_inside": 507
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "non-mega_B_cover",
+  "n": 171,
+  "bbox": [
+   [
+    0.94,
+    -25.23,
+    -30.96
+   ],
+   [
+    9.66,
+    -10.53,
+    -7.34
+   ]
+  ],
+  "depth_max": 5.44,
+  "depth_p90": 4.87,
+  "n_inside": 46
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "non-mega_T_cover",
+  "n": 189,
+  "bbox": [
+   [
+    0.94,
+    -25.23,
+    -4.69
+   ],
+   [
+    9.94,
+    -15.55,
+    25.54
+   ]
+  ],
+  "depth_max": 5.36,
+  "depth_p90": 3.95,
+  "n_inside": 58
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "I_shoulder_st_B",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "O_shoulder_st_F",
+  "n": 2202,
+  "bbox": [
+   [
+    -31.06,
+    -47.09,
+    -25.96
+   ],
+   [
+    -28.85,
+    -22.29,
+    22.62
+   ]
+  ],
+  "depth_max": 0.33,
+  "depth_p90": 0.33,
+  "n_inside": 1112
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "non-mega_L_side_plate",
+  "n": 301,
+  "bbox": [
+   [
+    5.87,
+    -25.23,
+    -18.44
+   ],
+   [
+    9.94,
+    -9.96,
+    6.07
+   ]
+  ],
+  "depth_max": 2.61,
+  "depth_p90": 1.69,
+  "n_inside": 105
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 174,
+  "bbox": [
+   [
+    4.44,
+    -25.23,
+    10.84
+   ],
+   [
+    7.44,
+    -19.73,
+    23.97
+   ]
+  ],
+  "depth_max": 0.01,
+  "depth_p90": 0.01,
+  "n_inside": 35
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "F_cover_st",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_middle",
+  "n": 1652,
+  "bbox": [
+   [
+    -20.56,
+    -9.73,
+    -12.96
+   ],
+   [
+    -0.06,
+    -7.73,
+    7.54
+   ]
+  ],
+  "depth_max": 0.54,
+  "depth_p90": 0.04,
+  "n_inside": 483
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "R_arm_st_LegFR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "non-mega_B_cover",
+  "n": 172,
+  "bbox": [
+   [
+    0.94,
+    -138.13,
+    -30.96
+   ],
+   [
+    9.66,
+    -123.43,
+    -7.34
+   ]
+  ],
+  "depth_max": 5.44,
+  "depth_p90": 4.87,
+  "n_inside": 46
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "non-mega_T_cover",
+  "n": 187,
+  "bbox": [
+   [
+    0.94,
+    -133.12,
+    -4.69
+   ],
+   [
+    9.94,
+    -123.43,
+    25.54
+   ]
+  ],
+  "depth_max": 5.36,
+  "depth_p90": 3.95,
+  "n_inside": 59
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "I_shoulder_st_B",
+  "n": 0
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "O_shoulder_st_F",
+  "n": 2406,
+  "bbox": [
+   [
+    -31.06,
+    -126.37,
+    -25.96
+   ],
+   [
+    -28.85,
+    -101.58,
+    22.62
+   ]
+  ],
+  "depth_max": 0.33,
+  "depth_p90": 0.33,
+  "n_inside": 1072
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "non_mega_R_side_plate",
+  "n": 303,
+  "bbox": [
+   [
+    5.87,
+    -138.71,
+    -18.64
+   ],
+   [
+    9.94,
+    -123.43,
+    6.07
+   ]
+  ],
+  "depth_max": 2.67,
+  "depth_p90": 1.71,
+  "n_inside": 110
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "F_cover_st",
+  "n": 0
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 174,
+  "bbox": [
+   [
+    4.44,
+    -128.93,
+    10.84
+   ],
+   [
+    7.44,
+    -123.43,
+    23.97
+   ]
+  ],
+  "depth_max": 0.01,
+  "depth_p90": 0.01,
+  "n_inside": 35
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "motor_LegFR_middle",
+  "n": 1609,
+  "bbox": [
+   [
+    -20.56,
+    -140.93,
+    -12.96
+   ],
+   [
+    -0.06,
+    -138.93,
+    7.54
+   ]
+  ],
+  "depth_max": 0.85,
+  "depth_p90": 0.04,
+  "n_inside": 506
+ },
+ {
+  "a": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+  "b": "motor_LegFR_top",
+  "n": 196,
+  "bbox": [
+   [
+    -4.62,
+    -123.43,
+    -22.96
+   ],
+   [
+    9.94,
+    -123.43,
+    17.54
+   ]
+  ],
+  "depth_max": 0.01,
+  "depth_p90": 0.0,
+  "n_inside": 13
+ },
+ {
+  "a": "L_arm_st_LegBL",
+  "b": "L_wrist_st_LegBL",
+  "n": 2497,
+  "bbox": [
+   [
+    188.74,
+    -4.23,
+    -104.82
+   ],
+   [
+    225.27,
+    -0.34,
+    -76.12
+   ]
+  ],
+  "depth_max": 2.65,
+  "depth_p90": 0.3,
+  "n_inside": 1542
+ },
+ {
+  "a": "L_arm_st_LegBL",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_st_LegBL",
+  "b": "motor_LegBL_middle",
+  "n": 261,
+  "bbox": [
+   [
+    133.13,
+    9.27,
+    -0.02
+   ],
+   [
+    155.53,
+    29.79,
+    16.64
+   ]
+  ],
+  "depth_max": 1.18,
+  "depth_p90": 1.13,
+  "n_inside": 60
+ },
+ {
+  "a": "L_arm_st_LegBL",
+  "b": "motor_LegBL_bottom",
+  "n": 1621,
+  "bbox": [
+   [
+    202.53,
+    -4.24,
+    -102.64
+   ],
+   [
+    223.03,
+    -1.73,
+    -82.14
+   ]
+  ],
+  "depth_max": 0.21,
+  "depth_p90": 0.04,
+  "n_inside": 624
+ },
+ {
+  "a": "L_arm_st_LegFL",
+  "b": "L_wrist_st_LegFL",
+  "n": 2497,
+  "bbox": [
+   [
+    27.94,
+    -4.23,
+    -104.82
+   ],
+   [
+    64.47,
+    -0.34,
+    -76.12
+   ]
+  ],
+  "depth_max": 2.2,
+  "depth_p90": 0.3,
+  "n_inside": 1540
+ },
+ {
+  "a": "L_arm_st_LegFL",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "L_arm_st_LegFL",
+  "b": "motor_LegFL_bottom",
+  "n": 1621,
+  "bbox": [
+   [
+    41.73,
+    -4.24,
+    -102.64
+   ],
+   [
+    62.23,
+    -1.73,
+    -82.14
+   ]
+  ],
+  "depth_max": 0.22,
+  "depth_p90": 0.04,
+  "n_inside": 624
+ },
+ {
+  "a": "L_arm_st_LegFL",
+  "b": "motor_LegFL_middle",
+  "n": 261,
+  "bbox": [
+   [
+    -27.67,
+    9.27,
+    -0.02
+   ],
+   [
+    -5.27,
+    29.79,
+    16.64
+   ]
+  ],
+  "depth_max": 1.18,
+  "depth_p90": 1.13,
+  "n_inside": 60
+ },
+ {
+  "a": "L_wrist_st_LegBL",
+  "b": "foot_LegBL",
+  "n": 189,
+  "bbox": [
+   [
+    135.99,
+    10.47,
+    -203.06
+   ],
+   [
+    162.72,
+    30.47,
+    -182.94
+   ]
+  ],
+  "depth_max": 3.69,
+  "depth_p90": 0.72,
+  "n_inside": 35
+ },
+ {
+  "a": "L_wrist_st_LegBL",
+  "b": "motor_LegBL_bottom",
+  "n": 4591,
+  "bbox": [
+   [
+    186.23,
+    -2.03,
+    -124.82
+   ],
+   [
+    227.85,
+    30.47,
+    -76.0
+   ]
+  ],
+  "depth_max": 1.84,
+  "depth_p90": 0.66,
+  "n_inside": 2738
+ },
+ {
+  "a": "L_wrist_st_LegFL",
+  "b": "foot_LegFL",
+  "n": 189,
+  "bbox": [
+   [
+    -24.81,
+    10.47,
+    -203.06
+   ],
+   [
+    1.92,
+    30.47,
+    -182.94
+   ]
+  ],
+  "depth_max": 3.02,
+  "depth_p90": 0.54,
+  "n_inside": 33
+ },
+ {
+  "a": "L_wrist_st_LegFL",
+  "b": "motor_LegFL_bottom",
+  "n": 4591,
+  "bbox": [
+   [
+    25.42,
+    -2.03,
+    -124.82
+   ],
+   [
+    67.04,
+    30.47,
+    -76.0
+   ]
+  ],
+  "depth_max": 1.84,
+  "depth_p90": 0.66,
+  "n_inside": 2737
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "R_arm_st_LegBR",
+  "n": 257,
+  "bbox": [
+   [
+    131.74,
+    -183.84,
+    -87.1
+   ],
+   [
+    202.18,
+    -153.5,
+    19.82
+   ]
+  ],
+  "depth_max": 2.94,
+  "depth_p90": 1.21,
+  "n_inside": 64
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "R_wrist_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "Bearing_LegBR_middle",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "Bearing_LegBR_bottom",
+  "n": 86,
+  "bbox": [
+   [
+    192.07,
+    -197.86,
+    -100.14
+   ],
+   [
+    223.0,
+    -191.57,
+    -74.1
+   ]
+  ],
+  "depth_max": 0.5,
+  "depth_p90": 0.38,
+  "n_inside": 216
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_bottom",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_middle",
+  "n": 2561,
+  "bbox": [
+   [
+    133.86,
+    -188.02,
+    -69.5
+   ],
+   [
+    202.18,
+    -153.07,
+    15.83
+   ]
+  ],
+  "depth_max": 3.4,
+  "depth_p90": 0.14,
+  "n_inside": 1166
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "R_arm_st_LegFR",
+  "n": 257,
+  "bbox": [
+   [
+    -29.06,
+    -183.84,
+    -87.1
+   ],
+   [
+    41.38,
+    -153.5,
+    19.82
+   ]
+  ],
+  "depth_max": 2.94,
+  "depth_p90": 1.21,
+  "n_inside": 64
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "R_wrist_st_LegFR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "Bearing_LegFR_bottom",
+  "n": 86,
+  "bbox": [
+   [
+    31.27,
+    -197.86,
+    -100.14
+   ],
+   [
+    62.19,
+    -191.57,
+    -74.1
+   ]
+  ],
+  "depth_max": 0.5,
+  "depth_p90": 0.38,
+  "n_inside": 220
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "Bearing_LegFR_middle",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "motor_LegFR_bottom",
+  "n": 0
+ },
+ {
+  "a": "R_arm_cover_for_shoulder_reinforcement_st_LegFR",
+  "b": "motor_LegFR_middle",
+  "n": 2561,
+  "bbox": [
+   [
+    -26.95,
+    -188.02,
+    -69.5
+   ],
+   [
+    41.38,
+    -153.07,
+    15.83
+   ]
+  ],
+  "depth_max": 3.4,
+  "depth_p90": 0.14,
+  "n_inside": 1166
+ },
+ {
+  "a": "R_arm_st_LegBR",
+  "b": "R_wrist_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_st_LegBR",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_st_LegBR",
+  "b": "motor_LegBR_bottom",
+  "n": 1663,
+  "bbox": [
+   [
+    202.53,
+    -145.93,
+    -102.64
+   ],
+   [
+    223.03,
+    -143.43,
+    -82.14
+   ]
+  ],
+  "depth_max": 1.04,
+  "depth_p90": 1.04,
+  "n_inside": 829
+ },
+ {
+  "a": "R_arm_st_LegBR",
+  "b": "motor_LegBR_middle",
+  "n": 253,
+  "bbox": [
+   [
+    133.13,
+    -177.46,
+    -0.02
+   ],
+   [
+    155.53,
+    -156.93,
+    16.64
+   ]
+  ],
+  "depth_max": 1.44,
+  "depth_p90": 1.27,
+  "n_inside": 62
+ },
+ {
+  "a": "R_arm_st_LegFR",
+  "b": "R_wrist_st_LegFR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_st_LegFR",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "R_arm_st_LegFR",
+  "b": "motor_LegFR_bottom",
+  "n": 1663,
+  "bbox": [
+   [
+    41.73,
+    -145.93,
+    -102.64
+   ],
+   [
+    62.23,
+    -143.43,
+    -82.14
+   ]
+  ],
+  "depth_max": 1.04,
+  "depth_p90": 1.04,
+  "n_inside": 829
+ },
+ {
+  "a": "R_arm_st_LegFR",
+  "b": "motor_LegFR_middle",
+  "n": 253,
+  "bbox": [
+   [
+    -27.67,
+    -177.46,
+    -0.02
+   ],
+   [
+    -5.27,
+    -156.93,
+    16.64
+   ]
+  ],
+  "depth_max": 1.44,
+  "depth_p90": 1.27,
+  "n_inside": 62
+ },
+ {
+  "a": "B_cover_st",
+  "b": "non-mega_B_cover",
+  "n": 319,
+  "bbox": [
+   [
+    141.59,
+    -84.33,
+    -36.24
+   ],
+   [
+    166.59,
+    -64.33,
+    -34.34
+   ]
+  ],
+  "depth_max": 0.42,
+  "depth_p90": 0.42,
+  "n_inside": 125
+ },
+ {
+  "a": "B_cover_st",
+  "b": "non-mega_T_cover",
+  "n": 0
+ },
+ {
+  "a": "B_cover_st",
+  "b": "I_shoulder_st_F",
+  "n": 166,
+  "bbox": [
+   [
+    141.59,
+    -84.42,
+    -36.24
+   ],
+   [
+    167.89,
+    -64.25,
+    -34.34
+   ]
+  ],
+  "depth_max": 0.54,
+  "depth_p90": 0.49,
+  "n_inside": 24
+ },
+ {
+  "a": "B_cover_st",
+  "b": "O_shoulder_st_B",
+  "n": 0
+ },
+ {
+  "a": "B_cover_st",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "B_cover_st",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "B_cover_st",
+  "b": "motor_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "B_cover_st",
+  "b": "motor_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "R_wrist_st_LegBR",
+  "b": "foot_LegBR",
+  "n": 196,
+  "bbox": [
+   [
+    135.99,
+    -179.13,
+    -203.06
+   ],
+   [
+    162.72,
+    -159.13,
+    -182.94
+   ]
+  ],
+  "depth_max": 2.83,
+  "depth_p90": 0.54,
+  "n_inside": 36
+ },
+ {
+  "a": "R_wrist_st_LegBR",
+  "b": "motor_LegBR_bottom",
+  "n": 4557,
+  "bbox": [
+   [
+    186.23,
+    -179.13,
+    -124.82
+   ],
+   [
+    227.85,
+    -146.63,
+    -76.0
+   ]
+  ],
+  "depth_max": 9.74,
+  "depth_p90": 0.66,
+  "n_inside": 2873
+ },
+ {
+  "a": "R_wrist_st_LegFR",
+  "b": "foot_LegFR",
+  "n": 196,
+  "bbox": [
+   [
+    -24.81,
+    -179.13,
+    -203.06
+   ],
+   [
+    1.92,
+    -159.13,
+    -182.94
+   ]
+  ],
+  "depth_max": 0.72,
+  "depth_p90": 0.5,
+  "n_inside": 35
+ },
+ {
+  "a": "R_wrist_st_LegFR",
+  "b": "motor_LegFR_bottom",
+  "n": 4557,
+  "bbox": [
+   [
+    25.42,
+    -179.13,
+    -124.82
+   ],
+   [
+    67.04,
+    -146.63,
+    -76.0
+   ]
+  ],
+  "depth_max": 8.61,
+  "depth_p90": 0.66,
+  "n_inside": 2876
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "non-mega_T_cover",
+  "n": 120,
+  "bbox": [
+   [
+    69.62,
+    -131.33,
+    -7.26
+   ],
+   [
+    142.51,
+    -17.33,
+    4.68
+   ]
+  ],
+  "depth_max": 0.0,
+  "depth_p90": 0.0,
+  "n_inside": 14
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "plate",
+  "n": 87,
+  "bbox": [
+   [
+    2.51,
+    -128.11,
+    -21.32
+   ],
+   [
+    142.51,
+    -20.56,
+    -18.54
+   ]
+  ],
+  "depth_max": 0.41,
+  "depth_p90": 0.41,
+  "n_inside": 16
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "I_shoulder_st_B",
+  "n": 162,
+  "bbox": [
+   [
+    -13.99,
+    -128.79,
+    -37.82
+   ],
+   [
+    146.63,
+    -17.33,
+    -8.32
+   ]
+  ],
+  "depth_max": 2.07,
+  "depth_p90": 1.36,
+  "n_inside": 14
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "I_shoulder_st_F",
+  "n": 190,
+  "bbox": [
+   [
+    -1.62,
+    -131.33,
+    -37.82
+   ],
+   [
+    159.01,
+    -19.33,
+    4.68
+   ]
+  ],
+  "depth_max": 0.92,
+  "depth_p90": 0.9,
+  "n_inside": 8
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "non-mega_L_side_plate",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "non_mega_R_side_plate",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "F_cover_st",
+  "n": 333,
+  "bbox": [
+   [
+    -18.99,
+    -85.42,
+    -37.82
+   ],
+   [
+    -1.62,
+    -62.42,
+    -35.82
+   ]
+  ],
+  "depth_max": 0.06,
+  "depth_p90": 0.06,
+  "n_inside": 125
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "Bearing_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "Bearing_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "Bearing_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "Bearing_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "motor_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "motor_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "motor_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_B_cover",
+  "b": "motor_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "I_shoulder_st_B",
+  "n": 849,
+  "bbox": [
+   [
+    -19.12,
+    -129.33,
+    -3.44
+   ],
+   [
+    157.58,
+    -17.33,
+    31.06
+   ]
+  ],
+  "depth_max": 1.82,
+  "depth_p90": 1.46,
+  "n_inside": 64
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "I_shoulder_st_F",
+  "n": 910,
+  "bbox": [
+   [
+    -12.82,
+    -131.33,
+    6.56
+   ],
+   [
+    163.88,
+    -19.64,
+    31.06
+   ]
+  ],
+  "depth_max": 1.96,
+  "depth_p90": 1.78,
+  "n_inside": 76
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "non-mega_L_side_plate",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "non_mega_R_side_plate",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 327,
+  "bbox": [
+   [
+    95.72,
+    -130.68,
+    14.38
+   ],
+   [
+    142.38,
+    -117.88,
+    28.95
+   ]
+  ],
+  "depth_max": 0.98,
+  "depth_p90": 0.91,
+  "n_inside": 60
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 322,
+  "bbox": [
+   [
+    2.38,
+    -28.69,
+    15.67
+   ],
+   [
+    49.05,
+    -18.41,
+    28.12
+   ]
+  ],
+  "depth_max": 1.32,
+  "depth_p90": 0.91,
+  "n_inside": 58
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "F_cover_st",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 327,
+  "bbox": [
+   [
+    95.72,
+    -30.79,
+    14.38
+   ],
+   [
+    142.38,
+    -17.99,
+    28.95
+   ]
+  ],
+  "depth_max": 0.98,
+  "depth_p90": 0.91,
+  "n_inside": 57
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 325,
+  "bbox": [
+   [
+    2.38,
+    -130.26,
+    15.67
+   ],
+   [
+    49.05,
+    -119.97,
+    28.12
+   ]
+  ],
+  "depth_max": 1.32,
+  "depth_p90": 0.91,
+  "n_inside": 58
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "Bearing_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "Bearing_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "Bearing_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "Bearing_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "motor_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "motor_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "motor_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "non-mega_T_cover",
+  "b": "motor_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "plate",
+  "b": "I_shoulder_st_F",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "O_shoulder_st_F",
+  "n": 26,
+  "bbox": [
+   [
+    -30.73,
+    -54.47,
+    22.84
+   ],
+   [
+    3.93,
+    -48.94,
+    31.39
+   ]
+  ],
+  "depth_max": 0.0,
+  "depth_p90": 0.0,
+  "n_inside": 2
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "F_cover_st",
+  "n": 181,
+  "bbox": [
+   [
+    -30.73,
+    -85.57,
+    -37.72
+   ],
+   [
+    11.33,
+    -66.76,
+    -24.56
+   ]
+  ],
+  "depth_max": 1.62,
+  "depth_p90": 1.29,
+  "n_inside": 29
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "Bearing_LegFR_top",
+  "n": 77,
+  "bbox": [
+   [
+    16.83,
+    -109.95,
+    -1.54
+   ],
+   [
+    21.67,
+    -103.69,
+    10.21
+   ]
+  ],
+  "depth_max": 0.23,
+  "depth_p90": 0.21,
+  "n_inside": 3
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "Bearing_LegFL_top",
+  "n": 46,
+  "bbox": [
+   [
+    16.84,
+    -44.92,
+    0.91
+   ],
+   [
+    21.61,
+    -42.29,
+    10.87
+   ]
+  ],
+  "depth_max": 0.31,
+  "depth_p90": 0.27,
+  "n_inside": 152
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "motor_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_B",
+  "b": "motor_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "O_shoulder_st_B",
+  "n": 26,
+  "bbox": [
+   [
+    136.26,
+    -99.73,
+    22.84
+   ],
+   [
+    170.91,
+    -94.19,
+    31.39
+   ]
+  ],
+  "depth_max": 0.0,
+  "depth_p90": 0.0,
+  "n_inside": 2
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "Bearing_LegBR_top",
+  "n": 46,
+  "bbox": [
+   [
+    118.57,
+    -106.37,
+    0.91
+   ],
+   [
+    123.35,
+    -103.75,
+    10.87
+   ]
+  ],
+  "depth_max": 0.0,
+  "depth_p90": 0.0,
+  "n_inside": 0
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "Bearing_LegBL_top",
+  "n": 77,
+  "bbox": [
+   [
+    118.51,
+    -44.98,
+    -1.54
+   ],
+   [
+    123.36,
+    -38.71,
+    10.21
+   ]
+  ],
+  "depth_max": 0.36,
+  "depth_p90": 0.32,
+  "n_inside": 255
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "motor_LegBL_top",
+  "n": 0
+ },
+ {
+  "a": "I_shoulder_st_F",
+  "b": "motor_LegBR_top",
+  "n": 0
+ },
+ {
+  "a": "O_shoulder_st_B",
+  "b": "motor_LegBL_top",
+  "n": 1831,
+  "bbox": [
+   [
+    170.91,
+    -56.69,
+    -22.55
+   ],
+   [
+    175.91,
+    -25.1,
+    17.77
+   ]
+  ],
+  "depth_max": 0.95,
+  "depth_p90": 0.21,
+  "n_inside": 1274
+ },
+ {
+  "a": "O_shoulder_st_B",
+  "b": "motor_LegBR_top",
+  "n": 1838,
+  "bbox": [
+   [
+    170.91,
+    -123.76,
+    -2.88
+   ],
+   [
+    175.91,
+    -103.1,
+    30.28
+   ]
+  ],
+  "depth_max": 0.8,
+  "depth_p90": 0.21,
+  "n_inside": 1861
+ },
+ {
+  "a": "O_shoulder_st_F",
+  "b": "F_cover_st",
+  "n": 0
+ },
+ {
+  "a": "O_shoulder_st_F",
+  "b": "motor_LegFL_top",
+  "n": 1838,
+  "bbox": [
+   [
+    -35.73,
+    -45.56,
+    -2.88
+   ],
+   [
+    -30.73,
+    -24.91,
+    30.28
+   ]
+  ],
+  "depth_max": 1.79,
+  "depth_p90": 0.21,
+  "n_inside": 1847
+ },
+ {
+  "a": "O_shoulder_st_F",
+  "b": "motor_LegFR_top",
+  "n": 1831,
+  "bbox": [
+   [
+    -35.73,
+    -123.57,
+    -22.55
+   ],
+   [
+    -30.73,
+    -91.98,
+    17.77
+   ]
+  ],
+  "depth_max": 1.79,
+  "depth_p90": 0.21,
+  "n_inside": 1212
+ },
+ {
+  "a": "non-mega_L_side_plate",
+  "b": "L_shoulder_reinforcement_st_LegFL",
+  "n": 0
+ },
+ {
+  "a": "non-mega_L_side_plate",
+  "b": "R_shoulder_reinforcement_LegBL",
+  "n": 0
+ },
+ {
+  "a": "non-mega_L_side_plate",
+  "b": "motor_LegFL_middle",
+  "n": 0
+ },
+ {
+  "a": "non_mega_R_side_plate",
+  "b": "L_shoulder_reinforcement_st_LegBR",
+  "n": 0
+ },
+ {
+  "a": "non_mega_R_side_plate",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "non_mega_R_side_plate",
+  "b": "motor_LegFR_middle",
+  "n": 0
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegBR",
+  "b": "Bearing_LegBR_middle",
+  "n": 0
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_middle",
+  "n": 0
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegBR",
+  "b": "motor_LegBR_top",
+  "n": 75,
+  "bbox": [
+   [
+    127.75,
+    -182.65,
+    16.54
+   ],
+   [
+    132.75,
+    -120.86,
+    18.04
+   ]
+  ],
+  "depth_max": 0.89,
+  "depth_p90": 0.81,
+  "n_inside": 20
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegFL",
+  "b": "F_cover_st",
+  "n": 0
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegFL",
+  "b": "Bearing_LegFL_middle",
+  "n": 0
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_top",
+  "n": 75,
+  "bbox": [
+   [
+    7.43,
+    -27.81,
+    16.54
+   ],
+   [
+    12.43,
+    33.98,
+    18.04
+   ]
+  ],
+  "depth_max": 0.89,
+  "depth_p90": 0.81,
+  "n_inside": 20
+ },
+ {
+  "a": "L_shoulder_reinforcement_st_LegFL",
+  "b": "motor_LegFL_middle",
+  "n": 0
+ },
+ {
+  "a": "F_cover_st",
+  "b": "R_shoulder_reinforcement_LegFR",
+  "n": 0
+ },
+ {
+  "a": "F_cover_st",
+  "b": "motor_LegFL_top",
+  "n": 0
+ },
+ {
+  "a": "F_cover_st",
+  "b": "motor_LegFR_top",
+  "n": 0
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegBL",
+  "b": "Bearing_LegBL_middle",
+  "n": 0
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegBL",
+  "b": "motor_LegBL_middle",
+  "n": 0
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegBL",
+  "b": "motor_LegBL_top",
+  "n": 71,
+  "bbox": [
+   [
+    127.75,
+    -27.81,
+    16.54
+   ],
+   [
+    132.75,
+    33.98,
+    18.04
+   ]
+  ],
+  "depth_max": 0.89,
+  "depth_p90": 0.85,
+  "n_inside": 19
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegFR",
+  "b": "Bearing_LegFR_middle",
+  "n": 0
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegFR",
+  "b": "motor_LegFR_middle",
+  "n": 0
+ },
+ {
+  "a": "R_shoulder_reinforcement_LegFR",
+  "b": "motor_LegFR_top",
+  "n": 71,
+  "bbox": [
+   [
+    7.43,
+    -182.65,
+    16.54
+   ],
+   [
+    12.43,
+    -120.86,
+    18.04
+   ]
+  ],
+  "depth_max": 0.89,
+  "depth_p90": 0.85,
+  "n_inside": 19
+ },
+ {
+  "a": "Bearing_LegBL_bottom",
+  "b": "motor_LegBL_bottom",
+  "n": 78,
+  "bbox": [
+   [
+    209.73,
+    43.26,
+    -95.4
+   ],
+   [
+    215.79,
+    48.95,
+    -89.33
+   ]
+  ],
+  "depth_max": 1.7,
+  "depth_p90": 1.7,
+  "n_inside": 9
+ },
+ {
+  "a": "Bearing_LegFR_bottom",
+  "b": "motor_LegFR_bottom",
+  "n": 63,
+  "bbox": [
+   [
+    48.92,
+    -197.62,
+    -95.38
+   ],
+   [
+    54.99,
+    -191.88,
+    -89.37
+   ]
+  ],
+  "depth_max": 1.19,
+  "depth_p90": 1.18,
+  "n_inside": 11
+ },
+ {
+  "a": "Bearing_LegFR_top",
+  "b": "motor_LegFR_top",
+  "n": 45,
+  "bbox": [
+   [
+    15.96,
+    -116.33,
+    4.46
+   ],
+   [
+    21.66,
+    -111.94,
+    10.31
+   ]
+  ],
+  "depth_max": 1.71,
+  "depth_p90": 1.71,
+  "n_inside": 10
+ },
+ {
+  "a": "Bearing_LegFL_middle",
+  "b": "motor_LegFL_middle",
+  "n": 0
+ },
+ {
+  "a": "Bearing_LegBL_middle",
+  "b": "motor_LegBL_middle",
+  "n": 0
+ },
+ {
+  "a": "Bearing_LegFR_middle",
+  "b": "motor_LegFR_middle",
+  "n": 0
+ },
+ {
+  "a": "Bearing_LegBR_middle",
+  "b": "motor_LegBR_middle",
+  "n": 0
+ },
+ {
+  "a": "Bearing_LegFL_top",
+  "b": "motor_LegFL_top",
+  "n": 45,
+  "bbox": [
+   [
+    15.96,
+    -38.33,
+    4.46
+   ],
+   [
+    21.66,
+    -33.94,
+    10.31
+   ]
+  ],
+  "depth_max": 1.71,
+  "depth_p90": 1.71,
+  "n_inside": 10
+ },
+ {
+  "a": "Bearing_LegBR_top",
+  "b": "motor_LegBR_top",
+  "n": 45,
+  "bbox": [
+   [
+    118.53,
+    -114.73,
+    4.46
+   ],
+   [
+    124.23,
+    -110.34,
+    10.31
+   ]
+  ],
+  "depth_max": 2.19,
+  "depth_p90": 1.92,
+  "n_inside": 10
+ },
+ {
+  "a": "Bearing_LegBR_bottom",
+  "b": "motor_LegBR_bottom",
+  "n": 63,
+  "bbox": [
+   [
+    209.72,
+    -197.62,
+    -95.38
+   ],
+   [
+    215.8,
+    -191.88,
+    -89.37
+   ]
+  ],
+  "depth_max": 1.19,
+  "depth_p90": 1.18,
+  "n_inside": 10
+ },
+ {
+  "a": "Bearing_LegBL_top",
+  "b": "motor_LegBL_top",
+  "n": 45,
+  "bbox": [
+   [
+    118.53,
+    -36.73,
+    4.46
+   ],
+   [
+    124.23,
+    -32.34,
+    10.31
+   ]
+  ],
+  "depth_max": 1.84,
+  "depth_p90": 0.75,
+  "n_inside": 7
+ },
+ {
+  "a": "Bearing_LegFL_bottom",
+  "b": "motor_LegFL_bottom",
+  "n": 78,
+  "bbox": [
+   [
+    48.93,
+    43.26,
+    -95.4
+   ],
+   [
+    54.98,
+    48.95,
+    -89.33
+   ]
+  ],
+  "depth_max": 1.7,
+  "depth_p90": 1.7,
+  "n_inside": 9
+ }
+]

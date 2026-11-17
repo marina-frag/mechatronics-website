@@ -65,7 +65,8 @@ export function ScrollHero() {
         <ModelStage
           label="Το 3D μοντέλο του Spot, που χωρίζεται στα εξαρτήματά του καθώς κάνεις scroll"
           className="stage--fill"
-          distance={1.45}
+          distance={1.7}
+          shift={[0.16, 0.04]}
           onReady={(m) => setCounts(countParts(m))}
         >
           {(model) => (

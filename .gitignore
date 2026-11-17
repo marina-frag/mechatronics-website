@@ -5,3 +5,4 @@ pipeline/out/
 public/draco/
 *.FCBak
 __pycache__/
+tools/assembly/cache/

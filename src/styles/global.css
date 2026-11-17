@@ -781,6 +781,176 @@ code {
   overflow: hidden;
 }
 
+/* σώμα ανοιγμένο, με ετικέτες */
+.anatomy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.anatomy__text {
+  max-width: 660px;
+}
+
+@media (min-width: 1240px) {
+  .anatomy {
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 24px 32px;
+    align-items: center;
+  }
+}
+
+.anatomy__text p:not(.eyebrow) {
+  font-size: 1.05rem;
+  color: var(--ink-2);
+}
+
+.anatomy__text .btn {
+  margin-top: 8px;
+}
+
+.anatomy__figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.anatomy__stage {
+  height: 540px;
+}
+
+.callouts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.callouts__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.callouts__lines polyline {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+
+.callouts__lines circle {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.callouts__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.callouts__label[data-side='left'] {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.callouts__label strong {
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.callouts__label span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.callouts__badge {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* σε φαρδιές οθόνες οι ετικέτες είναι πάνω στο σχήμα· η λίστα μένει μόνο για αναγνώστες οθόνης */
+.callouts-legend {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .anatomy__stage {
+    height: 520px;
+  }
+}
+
+@media (max-width: 700px) {
+  .anatomy__stage {
+    height: 320px;
+  }
+
+  .callouts__lines,
+  .callouts__label {
+    display: none;
+  }
+
+  .callouts__badge {
+    display: flex;
+  }
+
+  .callouts-legend {
+    position: static !important;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    margin: 12px 0 0;
+    padding-left: 22px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    display: grid;
+    gap: 6px;
+  }
+
+  .callouts-legend ::marker {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .callouts-legend strong {
+    color: var(--ink);
+  }
+}
+
+.figure__stage--tall {
+  height: 600px;
+}
+
+@media (max-width: 600px) {
+  .figure__stage.figure__stage--tall {
+    height: 460px;
+  }
+}
+
 .figure .range {
   max-width: 600px;
   margin: 18px auto 0;

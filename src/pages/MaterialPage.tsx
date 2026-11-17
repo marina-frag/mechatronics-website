@@ -8,7 +8,7 @@ export function MaterialPage() {
         <p className="eyebrow">{site.course}</p>
         <h1>Υλικό μαθήματος</h1>
         <p className="lead">
-          Οι διαφάνειες των διαλέξεων του {site.instructor}, {site.school}, {site.university}.
+          Οι διαφάνειες των διαλέξεων του {site.instructorGenitive}, {site.school}, {site.university}.
         </p>
 
         <ol className="lecture-list">

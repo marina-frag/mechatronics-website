@@ -57,6 +57,31 @@ export function boxOf(parts: Part[]): Box3 {
   return box;
 }
 
+/**
+ * Μετατοπίσεις ανάλυσης για μια ομάδα κομματιών, γύρω από το δικό της κέντρο (όχι το κέντρο του ρομπότ).
+ * worldOffset(p, center, radius) δίνει τη μετατόπιση του κομματιού σε συντεταγμένες κόσμου.
+ */
+export function groupOffsets(
+  parts: Part[],
+  worldOffset: (p: Part, center: Vector3, radius: number) => Vector3,
+): Map<string, Vector3> {
+  const box = boxOf(parts);
+  const center = box.getCenter(new Vector3());
+  const radius = Math.max(box.getSize(new Vector3()).length() / 2, 1e-3);
+  const out = new Map<string, Vector3>();
+  for (const p of parts) {
+    const parent = p.object.parent;
+    const d = worldOffset(p, center, radius);
+    if (!parent) {
+      out.set(p.id, d);
+      continue;
+    }
+    const a = parent.worldToLocal(center.clone());
+    out.set(p.id, parent.worldToLocal(center.clone().add(d)).sub(a));
+  }
+  return out;
+}
+
 function buildModel(source: Object3D): SpotModelData {
   const root = source.clone(true);
   root.updateMatrixWorld(true);

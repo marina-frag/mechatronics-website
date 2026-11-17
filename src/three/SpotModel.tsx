@@ -1,6 +1,6 @@
 import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { MathUtils, MeshStandardMaterial, type Object3D } from 'three';
+import { MathUtils, MeshStandardMaterial, type Object3D, type Vector3 } from 'three';
 import { originalMaterial, type Part, type SpotModelData } from './spotModel';
 
 export type Visibility = 'show' | 'ghost' | 'hide';
@@ -15,11 +15,13 @@ type Props = {
   onSelect?: (part: Part | null) => void;
   /** Πόσο γρήγορα φτάνουν τα κομμάτια στη θέση τους (μεγαλύτερο = πιο γρήγορα). */
   smoothing?: number;
+  /** Δική της μετατόπιση ανάλυσης ανά κομμάτι (id → διάνυσμα στο σύστημα του γονέα). Αλλιώς του μοντέλου. */
+  offsets?: Map<string, Vector3>;
 };
 
 const ACCENT = '#d4542c';
 
-export function SpotModel({ model, explode, visibility, selectedId, onSelect, smoothing = 7 }: Props) {
+export function SpotModel({ model, explode, visibility, selectedId, onSelect, smoothing = 7, offsets }: Props) {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const progress = useRef(new Map<string, number>());
   const modes = useRef(new Map<string, Visibility>());
@@ -58,7 +60,7 @@ export function SpotModel({ model, explode, visibility, selectedId, onSelect, sm
       const prev = progress.current.get(p.id);
       const next = prev === undefined ? target : MathUtils.damp(prev, target, smoothing, delta);
       progress.current.set(p.id, next);
-      p.object.position.copy(p.basePosition).addScaledVector(p.explodeOffset, next);
+      p.object.position.copy(p.basePosition).addScaledVector(offsets?.get(p.id) ?? p.explodeOffset, next);
     }
   });
 

@@ -1,0 +1,12 @@
+{
+ "motor_LegFΡ_top": "motor_LegFR_top",
+ "R_shoulder_reinforcement_LegBR": "R_shoulder_reinforcement_LegBL",
+ "L_shoulder_reinforcement_st_LegBL": "L_shoulder_reinforcement_st_LegBR",
+ "motor_LegΒR_top": "motor_LegBR_top",
+ "motor_LegΒR_middle": "motor_LegBR_middle",
+ "motor_LegΒR_bottom": "motor_LegBR_bottom",
+ "arm_joint_for_shoulder_reinforcement_st_LegFL": "L_arm_joint_for_shoulder_reinforcement_st_LegFL",
+ "arm_joint_for_shoulder_reinforcement_st_LegFR": "R_arm_joint_for_shoulder_reinforcement_st_LegFR",
+ "arm_joint_for_shoulder_reinforcement_st_LegBL": "R_arm_joint_for_shoulder_reinforcement_st_LegBL",
+ "arm_joint_for_shoulder_reinforcement_st_LegBR": "L_arm_joint_for_shoulder_reinforcement_st_LegBR"
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # FreeCAD συναρμολόγηση → spot.glb
 #
-#   ./build_glb.sh                       # προεπιλεγμένο SPOT_assembly.FCStd
+#   ./build_glb.sh                       # προεπιλογή: SPOT_assembly_auto.FCStd (αυτόματη συναρμολόγηση)
 #   ./build_glb.sh /path/αρχείο.FCStd    # άλλο αρχείο
 #   ./build_glb.sh "" --budget 250000    # επιπλέον επιλογές για το Blender
 #                                        # (--budget N, --no-draco, --no-blend)
@@ -11,8 +11,8 @@
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-FCSTD="${1:-$HOME/Spot_NTUA/3D Design/full-assembly/SPOT_assembly.FCStd}"
-[ -z "$FCSTD" ] && FCSTD="$HOME/Spot_NTUA/3D Design/full-assembly/SPOT_assembly.FCStd"
+FCSTD="${1:-$HOME/Spot_NTUA/3D Design/full-assembly/SPOT_assembly_auto.FCStd}"
+[ -z "$FCSTD" ] && FCSTD="$HOME/Spot_NTUA/3D Design/full-assembly/SPOT_assembly_auto.FCStd"
 shift || true
 BUILD="$HERE/build"
 OUT="${SPOT_OUT:-$HERE/out/spot.glb}"

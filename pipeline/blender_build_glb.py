@@ -63,8 +63,34 @@ def render_cover(path, root):
     cam = bpy.data.objects.new("_cover_cam", bpy.data.cameras.new("_cover_cam"))
     scene.collection.objects.link(cam)
     cam.data.lens = 50
-    d = Vector((1.0, -1.25, 0.8)).normalized()
-    cam.location = center + d * size * 1.15
+    d = Vector((-1.0, -1.25, 0.8)).normalized()   # μπροστά-δεξιά (μπροστά = -X)
+    # απόσταση ώστε όλο το bbox να χωρά στο κάδρο (με περιθώριο 8%), όποιο κι αν είναι το σχήμα του μοντέλου
+    f = -d
+    right = f.cross(Vector((0, 0, 1))).normalized()
+    up = right.cross(f).normalized()
+    tan_h = 18.0 / cam.data.lens * 0.90
+    tan_v = tan_h * 800 / 1200
+    # όλες οι κορυφές του μοντέλου (όχι μόνο οι γωνίες του bbox), για σφιχτό κάδρο
+    V = []
+    for o in root.children_recursive:
+        if o.type == "MESH":
+            n = len(o.data.vertices)
+            a = np.empty(n * 3, dtype=np.float64)
+            o.data.vertices.foreach_get("co", a)
+            M = np.array(o.matrix_world)
+            V.append(a.reshape(-1, 3) @ M[:3, :3].T + M[:3, 3])
+    V = np.vstack(V)
+    dn, rn, un = np.array(d), np.array(right), np.array(up)
+    target = np.array(center)
+    for _ in range(3):
+        R = V - target
+        depth, x, y = R @ dn, R @ rn, R @ un
+        dist = max(np.max(depth + np.abs(x) / tan_h), np.max(depth + np.abs(y) / tan_v))
+        sx, sy = x / (dist - depth), y / (dist - depth)
+        # κεντράρισμα της προβολής
+        target = target + rn * (sx.max() + sx.min()) / 2 * dist + un * (sy.max() + sy.min()) / 2 * dist
+    center = Vector(target)
+    cam.location = center + d * dist
     cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
     cam.data.clip_start, cam.data.clip_end = size * 0.01, size * 20
     scene.camera = cam

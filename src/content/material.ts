@@ -43,7 +43,7 @@ export const lectures: Lecture[] = [
   },
   {
     number: '04',
-    title: 'Διάλεξη 4η — Γραμμικοί γράφοι',
+    title: 'Διάλεξη 4η',
     date: '9–16 Οκτωβρίου 2026',
     topics: ['Γραμμικοί γράφοι'],
     pages: 55,
