@@ -1,0 +1,50 @@
+{
+  "_doc": "Ρυθμίσεις για το blender_build_glb.py. Οι κανόνες match είναι regex (χωρίς διάκριση πεζών/κεφαλαίων) πάνω στο Label του FreeCAD. Δες README.md.",
+
+  "subsystems": {
+    "frame":       { "label": "Σκελετός",    "material": "printed" },
+    "motors":      { "label": "Κινητήρες",   "material": "servo_case" },
+    "electronics": { "label": "Ηλεκτρονικά", "material": "pcb" }
+  },
+  "default_subsystem": "frame",
+
+  "component_rules": [
+    { "match": "servo|motor|st3020|scs15|scs40", "subsystem": "motors" },
+    { "match": "nsk|626zz|bearing", "subsystem": "frame", "material": "steel" },
+    { "match": "raspberry|rpi|pca9685|servo_driver|battery|lipo|lidar|imu|mpu6050|esp32|arduino", "subsystem": "electronics" }
+  ],
+
+  "_part_material_rules": "Μόνο για εξαρτήματα με πολλά κομμάτια (π.χ. servo, ρουλεμάν από STEP). Ο πρώτος κανόνας που ταιριάζει κερδίζει.",
+  "part_material_rules": [
+    { "match": "pcb", "material": "pcb" },
+    { "match": "gear|ball|ring|shield|m\\d+x\\d+|screw", "material": "steel" },
+    { "match": "pin|paizhing|amp|ph2", "material": "connector" }
+  ],
+
+  "_exclude_parts": "Regex για εσωτερικά κομμάτια που δεν θέλουμε στο .glb (π.χ. \"gear|pcb\" για το εσωτερικό του servo). Κενό = κρατάμε όλα.",
+  "exclude_parts": "",
+
+  "legs": "Leg(FL|FR|BL|BR)|_(F|B)$",
+
+  "materials": {
+    "printed":    { "color": "#d9d7d1", "metallic": 0.0, "roughness": 0.6 },
+    "servo_case": { "color": "#26272b", "metallic": 0.0, "roughness": 0.45 },
+    "steel":      { "color": "#c4c7cc", "metallic": 1.0, "roughness": 0.3 },
+    "pcb":        { "color": "#1e6b45", "metallic": 0.0, "roughness": 0.5 },
+    "connector":  { "color": "#efece4", "metallic": 0.0, "roughness": 0.5 }
+  },
+
+  "decimation": {
+    "triangle_budget": 400000,
+    "min_triangles_per_part": 200,
+    "_planar_angle_deg": "Ενώνει τα τρίγωνα των επίπεδων επιφανειών πριν τη μείωση. 0 = απενεργοποίηση.",
+    "planar_angle_deg": 0.05,
+    "_overrides": "Π.χ. { \"match\": \"foot\", \"max_triangles\": 3000 } ή { \"match\": \"plate\", \"keep\": true }",
+    "overrides": []
+  },
+
+  "weld_distance_mm": 0.001,
+  "smooth_angle_deg": 40,
+  "recenter_origins": true,
+  "draco": true
+}

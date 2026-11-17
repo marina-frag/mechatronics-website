@@ -1,0 +1,7 @@
+node_modules/
+dist/
+pipeline/build/
+pipeline/out/
+public/draco/
+*.FCBak
+__pycache__/
