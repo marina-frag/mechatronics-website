@@ -1,6 +1,8 @@
 /* ---------------------------------------------------------------- tokens */
+/* Μόνο φωτεινό θέμα, και σε συσκευές/browsers με dark mode. Το "only" ζητά από τον browser
+   να μην «σκουραίνει» μόνος του τη σελίδα (auto dark mode του Chrome/Edge). */
 :root {
-  color-scheme: light dark;
+  color-scheme: only light;
   --bg: #f6f5f1;
   --bg-tint: #edebe5;
   --surface: #ffffff;
@@ -14,22 +16,6 @@
   --shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 10px 30px rgb(0 0 0 / 0.07);
   --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --header-h: 60px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141416;
-    --bg-tint: #1b1b1f;
-    --surface: #202024;
-    --ink: #f2f1ee;
-    --ink-2: #cfcdc7;
-    --muted: #9a9aa1;
-    --line: #313137;
-    --accent: #ee7046;
-    --signal: #6aa8d8;
-    --focus: #6aa8d8;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.35);
-  }
 }
 
 /* ---------------------------------------------------------------- base */
