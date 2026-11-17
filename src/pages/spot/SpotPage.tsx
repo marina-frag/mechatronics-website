@@ -1,5 +1,5 @@
 import { site } from '../../content/site';
-import { electronics, spotGoals, spotIntro, spotTeam } from '../../content/spot/story';
+import { electronics, spotCredits, spotGoals, spotIntro, spotTeam } from '../../content/spot/story';
 import { ElectronicsDiagram } from './ElectronicsDiagram';
 import { Explorer } from './Explorer';
 import { BodyFigure } from './BodyFigure';
@@ -159,6 +159,25 @@ export default function SpotPage() {
           <p className="muted">
             {site.course} · {site.school}, {site.university} · {spotTeam.year}
           </p>
+          <h3 className="credits__title">Πηγές και άδειες</h3>
+          <ul className="credits">
+            {spotCredits.map((c) => (
+              <li key={c.url}>
+                <a href={c.url} target="_blank" rel="noopener">
+                  {c.work}
+                </a>{' '}
+                του {c.author} ·{' '}
+                {c.licenseUrl ? (
+                  <a href={c.licenseUrl} target="_blank" rel="noopener license">
+                    {c.license}
+                  </a>
+                ) : (
+                  c.license
+                )}
+                . {c.use}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </article>

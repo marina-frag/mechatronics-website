@@ -9,6 +9,9 @@ export type Lecture = {
   file: string;
 };
 
+/** Τα PDF είναι στο site; Στο npm run dev πάντα· στο build μόνο με VITE_PUBLISH_SLIDES=true (βλ. vite.config.ts). */
+export const slidesPublished = import.meta.env.DEV || import.meta.env.VITE_PUBLISH_SLIDES === 'true';
+
 // Από τα PDF του φακέλου class_slides (τίτλοι και περιεχόμενα της 1ης–2ης σελίδας).
 export const lectures: Lecture[] = [
   {

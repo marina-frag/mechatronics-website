@@ -45,10 +45,40 @@ npm run build    # στατικά αρχεία στο dist/
 npm run preview  # έλεγχος του build τοπικά
 ```
 
-Το `dist/` είναι σκέτα αρχεία (HTML, JS, CSS, `.glb`, PDF): δεν χρειάζεται server ή βάση
+Το `dist/` είναι σκέτα αρχεία (HTML, JS, CSS, `.glb`): δεν χρειάζεται server ή βάση
 δεδομένων, και ανεβαίνει σε οποιαδήποτε στατική φιλοξενία (Netlify, Cloudflare Pages, Vercel,
 GitHub Pages ή server της σχολής). Για φιλοξενία σε υποφάκελο, π.χ. στο GitHub Pages:
 `BASE_PATH=/όνομα-repo/ npm run build`.
+
+**PDF διαλέξεων.** Στο `npm run dev` φαίνονται πάντα. Στο build μπαίνουν μόνο με
+`VITE_PUBLISH_SLIDES=true npm run build`, αφού δοθεί άδεια από τον διδάσκοντα. Χωρίς αυτό, η σελίδα
+«Υλικό μαθήματος» δείχνει τις διαλέξεις χωρίς κουμπιά PDF, και ο φάκελος `material/` δεν μπαίνει στο `dist/`.
+Τα PDF δεν είναι στο git (`.gitignore`): υπάρχουν μόνο τοπικά, στο `public/material/` και στο `class_slides/`.
+Για να μπουν στο GitHub Pages όταν δοθεί άδεια, βγάλε τη γραμμή `public/material/*.pdf` από το `.gitignore`,
+κάνε commit τα PDF και όρισε `PUBLISH_SLIDES=true`.
+
+### GitHub Pages (αυτόματα σε κάθε push)
+
+Το [.github/workflows/pages.yml](.github/workflows/pages.yml) χτίζει και ανεβάζει το site σε κάθε push στο `main`,
+στο `https://<χρήστης>.github.io/<repo>/`. Μία φορά, στο GitHub:
+
+1. Αν το repo είναι private, χρειάζεται GitHub Pro (δωρεάν με το GitHub Student Developer Pack, με email
+   `@mail.ntua.gr`). Αλλιώς το repo γίνεται public.
+2. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+3. Push στο `main` (ή **Actions → Δημοσίευση στο GitHub Pages → Run workflow**). Η διεύθυνση φαίνεται στο
+   Settings → Pages όταν τελειώσει.
+
+Προαιρετικές μεταβλητές, στο **Settings → Secrets and variables → Actions → Variables**:
+
+| Μεταβλητή | Τιμή | Τι κάνει |
+|---|---|---|
+| `PUBLISH_SLIDES` | `true` | Βάζει τα PDF των διαλέξεων στο site |
+| `BASE_PATH` | `/` | Για δικό του domain (π.χ. subdomain της σχολής), αντί για τον υποφάκελο του repo |
+
+Το 3D μοντέλο δεν χτίζεται στο GitHub (χρειάζεται FreeCAD και Blender): ανεβαίνει το
+`public/models/spot.glb` όπως είναι στο repo. Μετά από `npm run glb`, κάνε commit και push το νέο `.glb`.
+Έλεγχος του build για GitHub Pages τοπικά: `BASE_PATH=/mechatronics-website/ npm run build` και
+`BASE_PATH=/mechatronics-website/ npm run preview`, στο `http://localhost:4173/mechatronics-website/`.
 
 # How to run
 

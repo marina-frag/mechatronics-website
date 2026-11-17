@@ -1,4 +1,4 @@
-import { lectures } from '../content/material';
+import { lectures, slidesPublished } from '../content/material';
 import { asset, site } from '../content/site';
 
 export function MaterialPage() {
@@ -10,6 +10,7 @@ export function MaterialPage() {
         <p className="lead">
           Οι διαφάνειες των διαλέξεων του {site.instructorGenitive}, {site.school}, {site.university}.
         </p>
+        {!slidesPublished && <p className="muted">Τα PDF των διαλέξεων θα προστεθούν σύντομα.</p>}
 
         <ol className="lecture-list">
           {lectures.map((l) => (
@@ -28,9 +29,11 @@ export function MaterialPage() {
                   ))}
                 </ul>
               </div>
-              <a className="btn" href={asset(l.file)} target="_blank" rel="noopener">
-                PDF · {l.sizeMb.toLocaleString('el-GR')} MB
-              </a>
+              {slidesPublished && (
+                <a className="btn" href={asset(l.file)} target="_blank" rel="noopener">
+                  PDF · {l.sizeMb.toLocaleString('el-GR')} MB
+                </a>
+              )}
             </li>
           ))}
         </ol>

@@ -6,3 +6,10 @@ public/draco/
 *.FCBak
 __pycache__/
 tools/assembly/cache/
+
+# Διαφάνειες διαλέξεων: δεν δημοσιεύονται χωρίς άδεια του διδάσκοντα (μένουν μόνο τοπικά)
+class_slides/
+public/material/*.pdf
+# Έγγραφο ομάδας με αριθμούς μητρώου: ποτέ στο δημόσιο repo
+spot_team_description.pdf
+*.swp

@@ -10,7 +10,7 @@ export const spotIntro = {
     'Στόχος του project είναι η σχεδίαση, η κατασκευή και ο προγραμματισμός ενός ρομποτικού μηχανισμού: η ομάδα επέλεξε έναν τετράποδο ρομποτικό σκύλο, το Spot, με αφετηρία το ανοιχτό σχέδιο SpotMicro.',
     'Το Spot περιλαμβάνει την 3D εκτύπωση και τη συναρμολόγηση του σκελετού και των ποδιών, την ενοποίηση των ηλεκτρονικών και τον προγραμματισμό των βασικών λειτουργιών: όρθια στάση και βάδιση. Στη συνέχεια επεκτείνεται με LiDAR, ώστε να αντιλαμβάνεται τον χώρο και να αποφεύγει εμπόδια.',
   ],
-  basedOn: 'SpotMicro (ανοιχτό σχέδιο)',
+  basedOn: 'SpotMicro του KDY0523 (ανοιχτό σχέδιο)',
 };
 
 export const spotGoals = [
@@ -31,6 +31,35 @@ export const spotTeam = {
     'Μαρίνα Φραγκούλη',
   ],
 };
+
+/**
+ * Σχέδια τρίτων πάνω στα οποία βασίζεται το Spot. Οι άδειες Creative Commons Attribution ζητούν
+ * όνομα δημιουργού, link στο έργο και στην άδεια, και αναφορά ότι έγιναν αλλαγές.
+ */
+export const spotCredits: {
+  work: string;
+  author: string;
+  url: string;
+  license: string;
+  licenseUrl?: string;
+  use: string;
+}[] = [
+  {
+    work: 'Spotmicro – robot dog',
+    author: 'KDY0523',
+    url: 'https://www.thingiverse.com/thing:3445283',
+    license: 'CC BY 3.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
+    use: 'Ο σκελετός και τα πόδια, με αλλαγές της ομάδας για τους κινητήρες ST3020.',
+  },
+  {
+    work: 'Spot Micro Plain Plate and Rpi and Servo Board Mounts',
+    author: 'mike4192',
+    url: 'https://www.thingiverse.com/thing:4596267',
+    license: 'Creative Commons – Attribution',
+    use: 'Η πλάκα ηλεκτρονικών.',
+  },
+];
 
 /** Βήματα για το animation συναρμολόγησης. Πρόταση σειράς, προς επιβεβαίωση από την ομάδα. */
 export const assemblySteps: { title: string; text: string; types: PartTypeKey[] }[] = [
