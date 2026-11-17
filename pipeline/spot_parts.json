@@ -26,6 +26,11 @@
 
   "legs": "Leg(FL|FR|BL|BR)|_(F|B)$",
 
+  "_replace_parts": "Εξαρτήματα που στο .glb γίνονται απλό σχήμα με τις ίδιες διαστάσεις. Τα ρουλεμάν NSK 626ZZ είναι CAD από το CADENAS/3Dfindit, που οι όροι του δεν επιτρέπουν αναδιανομή: στο site μπαίνει δακτύλιος 6 × 19 × 6 mm.",
+  "replace_parts": [
+    { "match": "bearing|626zz|nsk", "shape": "ring", "inner_diameter_mm": 6 }
+  ],
+
   "materials": {
     "printed":    { "color": "#d9d7d1", "metallic": 0.0, "roughness": 0.6 },
     "servo_case": { "color": "#26272b", "metallic": 0.0, "roughness": 0.45 },

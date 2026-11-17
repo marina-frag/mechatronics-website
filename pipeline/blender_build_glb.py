@@ -237,6 +237,39 @@ def collapse_to(me, target, scratch):
     return _evaluate(me, scratch, setup)
 
 
+def ring_arrays(lo, hi, inner_d, segments=40):
+    """Απλό ρουλεμάν (δακτύλιος με εσοχή στα καπάκια) που γεμίζει το κουτί lo..hi του αρχικού κομματιού.
+    Άξονας: η διάσταση που διαφέρει από τις άλλες δύο (π.χ. 6 στα 6×19×19). Επιστρέφει (κορυφές, τρίγωνα)."""
+    size, c = hi - lo, (lo + hi) / 2
+    ax = int(np.argmax([abs(size[i] - np.mean(np.delete(size, i))) for i in range(3)]))
+    e1, e2 = [np.eye(3)[i] for i in range(3) if i != ax]
+    ea = np.eye(3)[ax]
+    ro, ri, h = float(np.mean(np.delete(size, ax))) / 2, inner_d / 2, size[ax] / 2
+    r1, r2, d = ri + 0.25 * (ro - ri), ro - 0.2 * (ro - ri), min(0.3, 0.1 * h)
+    # κλειστό προφίλ (r, z): εσωτερικός δακτύλιος, καπάκι σε εσοχή, εξωτερικός δακτύλιος
+    prof = [(ri, -h), (r1, -h), (r1, -h + d), (r2, -h + d), (r2, -h), (ro, -h),
+            (ro, h), (r2, h), (r2, h - d), (r1, h - d), (r1, h), (ri, h)]
+    th = np.linspace(0, 2 * np.pi, segments, endpoint=False)
+    V = np.array([c + r * (np.cos(a) * e1 + np.sin(a) * e2) + z * ea for r, z in prof for a in th])
+    P, S = len(prof), segments
+    T = []
+    for k in range(P):
+        kn = (k + 1) % P
+        for j in range(S):
+            jn = (j + 1) % S
+            a, b, cc, dd = k * S + j, kn * S + j, kn * S + jn, k * S + jn
+            T += [(a, b, cc), (a, cc, dd)]
+    return V, np.array(T)
+
+
+def recalc_normals(me):
+    bm = bmesh.new()
+    bm.from_mesh(me)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(me)
+    bm.free()
+
+
 def surface_area(v, t):
     a, b, c = v[t[:, 0]], v[t[:, 1]], v[t[:, 2]]
     return float(0.5 * np.linalg.norm(np.cross(b - a, c - a), axis=1).sum())
@@ -311,6 +344,20 @@ def main():
             subs = [s for s in subs if not re.search(exclude, s["label"], re.IGNORECASE)]
         kept[gid] = subs
 
+    # Κομμάτια που στο .glb γίνονται απλό σχήμα με τις ίδιες διαστάσεις (π.χ. CAD κατασκευαστή που οι όροι του
+    # δεν επιτρέπουν αναδιανομή). Βλ. replace_parts στο spot_parts.json.
+    synthetic = {}
+    for gid, users in geo_users.items():
+        rule = first_match(cfg.get("replace_parts", []), users[0]["label"])
+        if not rule:
+            continue
+        pts = np.vstack([np.frombuffer(blob, "<f4", s["v_count"] * 3, s["v_off"]).reshape(-1, 3)
+                         for s in geoms[gid]["submeshes"]])
+        synthetic[gid] = ring_arrays(pts.min(0), pts.max(0), rule["inner_diameter_mm"], rule.get("segments", 40))
+        kept[gid] = [{"label": users[0]["label"], "t_count": len(synthetic[gid][1])}]
+    if synthetic:
+        log(f"Απλό σχήμα αντί για το αρχικό σε {sum(len(geo_users[g]) for g in synthetic)} εξαρτήματα")
+
     # 1) Κάθε κομμάτι: ένωση κορυφών + planar dissolve (χωρίς αλλαγή σχήματος).
     inst = Counter(c["geometry"] for c in comps)
     tris = {g: sum(s["t_count"] for s in kept[g]) for g in geo_users}
@@ -318,6 +365,15 @@ def main():
     for gid, users in geo_users.items():
         rule = first_match(cfg["decimation"].get("overrides", []), users[0]["label"])
         for i, s in enumerate(kept[gid]):
+            if gid in synthetic:
+                v, t = synthetic[gid][0] * scale, synthetic[gid][1]
+                me = new_mesh("_part", v, t)
+                recalc_normals(me)
+                n = triangle_count(me)
+                part_mesh[(gid, i)] = me
+                budget_parts[(gid, i)] = {"t": n, "area": surface_area(v, t), "inst": inst[gid],
+                                          "floor": n, "fixed": n}
+                continue
             v = np.frombuffer(blob, "<f4", s["v_count"] * 3, s["v_off"]).reshape(-1, 3) * scale
             t = np.frombuffer(blob, "<u4", s["t_count"] * 3, s["i_off"]).reshape(-1, 3)
             me = new_mesh("_part", v, t)
@@ -346,7 +402,7 @@ def main():
     # 3) Collapse στον στόχο και ένωση των κομματιών κάθε γεωμετρίας σε ένα mesh.
     geo_mesh, geo_center, geo_final = {}, {}, {}
     for gid, users in geo_users.items():
-        multi = len(geoms[gid]["submeshes"]) > 1
+        multi = len(kept[gid]) > 1
         base_mat = users[0]["material"]
         parts_v, parts_t, parts_m = [], [], []
         offset = 0
